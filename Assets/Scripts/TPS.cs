@@ -79,12 +79,13 @@ public class TPS : MonoBehaviour
             _pG = Mathf.Sqrt(_jump * -2 * _gravity);
         }
 
-        Vector3 
-        _controller.Move()
+        Vector3 _totalJump = vector3 (0, _pG, 0);
+        
+        _controller.Move(_totalJump * -2 * Time.deltaTime);
 
         //ya no tengo jugo cerebral ayuda T^T 
         //havia algo con un vector 3 transform y ahi metias el _pG en la Y y eso se pasaba al controller move... como era...
-        
+
 
     }
 }
